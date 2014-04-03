@@ -1,0 +1,402 @@
+FORMAT: 1A
+HOST: http://www.greenlab.com
+
+# Decos ipd API
+Decos ipd API is a service you can use to interact with functionalities exposed by *Decos Integrated Periferal Device (IPD)*.
+
+# Group ipd
+ipd related resources of the **Decos ipd API**
+
+## Time Collection [/time]
+### List Time info [GET]
++ Response 200 (application/json)
+
+        {
+            "serial": "0123454",
+            "timestamp": "2014-02-13T15:26:41.685Z",
+            "uptime": 1392305193,
+            "status": 0xdead
+        }
+
+## Primary Measures Collection [/mprim]
+### List all Primary Measures [GET]
++ Response 200 (application/json)
+
+        {
+            "V1": 219.01,
+            "V2": 220.02,
+            "V3": 221.03,
+            "I1": 9.01,
+            "I2": 10.02,
+            "I3": 11.03,
+            "Ip": 10.00,
+            "ThdV1": 0,
+            "ThdV2": 0,
+            "ThdV3": 0,
+            "ThdI1": 0,
+            "ThdI2": 0,
+            "ThdI3": 0,
+            "P1": 0,
+            "P2": 0,
+            "P3": 0,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0,
+            "S1": 0,
+            "S2": 0,
+            "S3": 0,
+            "PF1": 0,
+            "PF2": 0,
+            "PF3": 0,
+            "freq": 0
+        }
+
+## Primary Measure [/mprim/{name}]
+A single Primary Measure object with all its details
+
++ Parameters
+    + name (required, string, `V1`) ... String `name` of the Primary Measure to perform action with. Has example value.
+    
+        + Values
+            + `V1`
+            + `V2`
+            + `V3`
+            + `I1`
+            + `I2`
+            + `I3`
+            + `Ip`
+            + `ThdV1`
+            + `ThdV2`
+            + `ThdV3`
+            + `ThdI1`
+            + `ThdI2`
+            + `ThdI3`
+            + `P1`
+            + `P2`
+            + `P3`
+            + `Q1`
+            + `Q2`
+            + `Q3`
+            + `S1`
+            + `S2`
+            + `S3`
+            + `PF1`
+            + `PF2`
+            + `PF3`
+            + `freq`
+
+### Retrieve a Primary Measure [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "V1": 219.01 }
+
+## Primary Measures Average Collection [/mmed]
+### List all Primary Measures Average [GET]
++ Response 200 (application/json)
+
+        {
+            "V1": 219.01,
+            "V2": 220.02,
+            "V3": 221.03,
+            "I1": 9.01,
+            "I2": 10.02,
+            "I3": 11.03,
+            "Ip": 10.00,
+            "ThdV1": 0,
+            "ThdV2": 0,
+            "ThdV3": 0,
+            "ThdI1": 0,
+            "ThdI2": 0,
+            "ThdI3": 0,
+            "P1": 0,
+            "P2": 0,
+            "P3": 0,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0,
+            "S1": 0,
+            "S2": 0,
+            "S3": 0,
+            "PF1": 0,
+            "PF2": 0,
+            "PF3": 0,
+            "freq": 0
+        }
+
+## Primary Measure Average [/mmed/{name}]
+A single Primary Measure Average object with all its details
+
++ Parameters
+    + name (required, string, `V1`) ... String `name` of the Primary Measure Average to perform action with. Has example value.
+    
+        + Values
+            + `V1`
+            + `V2`
+            + `V3`
+            + `I1`
+            + `I2`
+            + `I3`
+            + `Ip`
+            + `ThdV1`
+            + `ThdV2`
+            + `ThdV3`
+            + `ThdI1`
+            + `ThdI2`
+            + `ThdI3`
+            + `P1`
+            + `P2`
+            + `P3`
+            + `Q1`
+            + `Q2`
+            + `Q3`
+            + `S1`
+            + `S2`
+            + `S3`
+            + `PF1`
+            + `PF2`
+            + `PF3`
+            + `freq`
+
+### Retrieve a Primary Measure Average [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "V1": 219.01 }
+
+## Primary Measures Average 10 minutes Collection [/mmed10]
+### List all Primary Measures Average 10 minutes [GET]
++ Response 200 (application/json)
+
+        {
+            "V1": 219.01,
+            "V2": 220.02,
+            "V3": 221.03,
+            "I1": 9.01,
+            "I2": 10.02,
+            "I3": 11.03,
+            "Ip": 10.00,
+            "ThdV1": 0,
+            "ThdV2": 0,
+            "ThdV3": 0,
+            "ThdI1": 0,
+            "ThdI2": 0,
+            "ThdI3": 0,
+            "P1": 0,
+            "P2": 0,
+            "P3": 0,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0,
+            "S1": 0,
+            "S2": 0,
+            "S3": 0,
+            "PF1": 0,
+            "PF2": 0,
+            "PF3": 0,
+            "freq": 0
+        }
+
+## Primary Measure Average 10 minutes [/mmed10/{name}]
+A single Primary Measure Average 10 minutes object with all its details
+
++ Parameters
+    + name (required, string, `V1`) ... String `name` of the Primary Measure Average 10 minutes to perform action with. Has example value.
+    
+        + Values
+            + `V1`
+            + `V2`
+            + `V3`
+            + `I1`
+            + `I2`
+            + `I3`
+            + `Ip`
+            + `ThdV1`
+            + `ThdV2`
+            + `ThdV3`
+            + `ThdI1`
+            + `ThdI2`
+            + `ThdI3`
+            + `P1`
+            + `P2`
+            + `P3`
+            + `Q1`
+            + `Q2`
+            + `Q3`
+            + `S1`
+            + `S2`
+            + `S3`
+            + `PF1`
+            + `PF2`
+            + `PF3`
+            + `freq`
+
+### Retrieve a Primary Measure Average 10 minutes [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "V1": 219.01 }
+
+## Primary Measures Maximum Values Collection [/mmax]
+### List all Primary Measures Maximum Values [GET]
++ Response 200 (application/json)
+
+        {
+            "V1": 219.01,
+            "V2": 220.02,
+            "V3": 221.03,
+            "I1": 9.01,
+            "I2": 10.02,
+            "I3": 11.03,
+            "Ip": 10.00,
+            "ThdV1": 0,
+            "ThdV2": 0,
+            "ThdV3": 0,
+            "ThdI1": 0,
+            "ThdI2": 0,
+            "ThdI3": 0,
+            "P1": 0,
+            "P2": 0,
+            "P3": 0,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0,
+            "S1": 0,
+            "S2": 0,
+            "S3": 0,
+            "PF1": 0,
+            "PF2": 0,
+            "PF3": 0,
+            "freq": 0
+        }
+
+### Reset all Primary Measures Maximum Values [DELETE]
++ Response 204
+
+
+## Primary Measures Maximum Values [/mmax/{name}]
+A single Primary Measures Maximum Values object with all its details
+
++ Parameters
+    + name (required, string, `V1`) ... String `name` of the Primary Measure Average 10 minutes to perform action with. Has example value.
+    
+        + Values
+            + `V1`
+            + `V2`
+            + `V3`
+            + `I1`
+            + `I2`
+            + `I3`
+            + `Ip`
+            + `ThdV1`
+            + `ThdV2`
+            + `ThdV3`
+            + `ThdI1`
+            + `ThdI2`
+            + `ThdI3`
+            + `P1`
+            + `P2`
+            + `P3`
+            + `Q1`
+            + `Q2`
+            + `Q3`
+            + `S1`
+            + `S2`
+            + `S3`
+            + `PF1`
+            + `PF2`
+            + `PF3`
+            + `freq`
+
+### Retrieve a Primary Measures Maximum Values [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "V1": 219.01 }
+
+## Identification Parameters Collection [/ident]
+### List all Identification Parameters [GET]
++ Response 200 (application/json)
+
+        {
+            "serial": "0123456789",
+            "imei": "490154203237518",
+            "imsi": "404685505601234",
+            "number": "+393456789012",
+            "hwRel": "0.1.0",
+            "hwRelTime": "2014-02-13T15:26:41.685Z",
+            "swRel": "0.1.0",
+            "swRelTime": "2014-02-13T15:26:41.685Z",
+            "swUpgTime": "2014-02-13T15:26:41.685Z"
+        }
+        
+### Setting Identification Parameters [PUT]
++ Request (application/json)
+
+        {
+            "serial": "0123456789",
+            "imei": "490154203237518",
+            "imsi": "404685505601234",
+            "number": "+393456789012",
+            "hwRel": "0.1.0",
+            "hwRelTime": "2014-02-13T15:26:41.685Z",
+            "swRel": "0.1.0",
+            "swRelTime": "2014-02-13T15:26:41.685Z",
+            "swUpgTime": "2014-02-13T15:26:41.685Z"
+        }
+
++ Response 200
+
+
+## Identification Parameters [/ident/{name}]
+A single Identification Parameters object with all its details
+
++ Parameters
+    + name (required, string, `serial`) ... String `name` of the Primary Measure Average 10 minutes to perform action with. Has example value.
+    
+        + Values
+            + `serial`
+            + `imei`
+            + `imsi`
+            + `number`
+            + `hwRel`
+            + `hwRelTime`
+            + `swRel`
+            + `swRelTime`
+            + `swUpgTime`
+
+### Retrieve an Identification Parameters [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "serial": "0123456789" }
+
+
+### Setting an Identification Parameters [PUT]
++ Request (application/json)
+
+        {
+            "serial": "0123456789",
+        }
+
++ Response 200
+
+
+## Calibration Parameters Collection [/calibration]
+### List all Calibration Parameters [GET]
++ Response 200 (application/json)
+
+        {
+            "calv1": 0.05,
+            "calv2": 0.05,
+            "calv3": 0.05,
+            "cali1": 1.2,
+            "cali2": 1.2,
+            "cali3": 1.2
+        }
+        
